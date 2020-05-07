@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using JsonToHtml.Utilities
+@model JsonToHtml.Models.FormModel
+    <form action="Contact.cshtml">
+        <div class="mainContain">
+            @{
+
+                foreach (var item in Model.items)
+                {
+
+
+                    switch (item.type)
+                    {
+                        case "text":
+                            <input type=@item.type name=@item.name placeholder=@item.placeholder required=@item.required pattern=@ValidateReqular.Validate(item.validationRules) class=@item.htmlClass disabled=@item.disabled>
+                            break;
+
+                        case "textarea":
+                            <textarea name=@item.name placeholder=@item.placeholder required=@item.required pattern=@ValidateReqular.Validate(item.validationRules) class=@item.htmlClass disabled=@item.disabled></textarea>
+                            break;
+
+                        case "checkbox":
+                            <input type=@item.type name=@item.name placeholder=@item.placeholder required=@item.required pattern=@ValidateReqular.Validate(item.validationRules) class=@item.htmlClass disabled=@item.disabled checked=@item.checkedBox />
+                            break;
+
+                        case "button":
+                            <input type=@item.type class=@item.htmlClass value=@item.text />
+                            break;
+
+                        case "select":
+                            <select name=@item.name placeholder=@item.placeholder required=@item.required class=@item.htmlClass disabled=@item.disabled>
+                                @foreach (var t in item.options)
+                                {
+                                    <option value=@t.value selected=@t.selected>@t.text</option>
+                                }
+                            </select>
+                            break;
+
+                        case "radio":
+
+                            foreach (var radioItem in item.items)
+                            {
+
+                                <input type=@item.type value=@radioItem.value checked=@radioItem.checkedRadio name=@item.name placeholder=@item.placeholder required=@item.required class=@item.htmlClass disabled=@item.disabled checked=@radioItem.checkedRadio>
+                                <label for=@item.htmlClass>@radioItem.label</label>
+                            }
+
+                            break;
+
+
+                    }
+
+
+                }
+            }
+            <input type="submit" />
+        </div>
+    </form>

@@ -1,0 +1,136 @@
+{
+  "form": 
+    {
+      "type": "form",
+      "message": "Success"
+    },
+
+  
+  "name": "one",
+  "items": [
+    {
+      "type": "text",
+      "name": "Текст",
+      "placeholder": "Напишите что нибудь",
+      "required": true,
+      "validationRules": "text",
+      "value": "",
+      "label": "Это текстовое поле",
+      "htmlClass": "textInput",
+      "disabled": false,
+	  "selected" : false
+    },
+	
+	 {
+      "type": "text",
+      "name": "Текст",
+      "placeholder": "Сообщение",
+      "required": true,
+      "validationRules": "email",
+      "value": "",
+      "label": "Это текстовое поле",
+      "htmlClass": "textInput",
+      "disabled": false,
+	  "selected" : false
+    },
+	
+	{
+      "type": "textarea",
+      "name": "ТекстАреа",
+      "placeholder": "Текст",
+      "required": true,
+      "validationRules": "text",
+      "value": "",
+      "label": "Это текстовое поле",
+      "htmlClass": "textArea",
+      "disabled": false
+    },
+	
+	{
+      "type": "checkbox",
+      "name": "Чекбокс",
+      "placeholder": "Текст",
+      "required": true,
+      "validationRules": "text",
+      "label": "Это текстовое поле",
+      "htmlClass": "CheckBoxStyle",
+      "disabled": false,
+	  "checkedBox": true
+    },
+	
+	{
+      "type": "button",
+      "name": "Кнопка",
+      "htmlClass": "ButtonClass",
+	  "text" : "Текст"
+     
+    },
+	
+	{
+      "type": "select",
+      "name": "Селектор",
+      "placeholder": "Выбрать",
+      "required": true,
+      "validationRules": "text",
+      "label": "Это аттрибут Select",
+      "htmlClass": "SelectStyle",
+      "disabled": false,
+	  "options" : [
+		{
+			"value" : "1",
+			"text" : "Значение 1",
+			"selected" : true
+		},
+		
+		{
+			"value" : "2",
+			"text" : "Значение 2",
+			"selected" : true
+		}
+	  
+	  ]
+    },
+	
+	
+	{
+      "type": "radio",
+      "name": "Селектор",
+      "placeholder": "Выбрать",
+      "required": true,
+      "validationRules": "text",
+      "label": "Это аттрибут Select",
+      "htmlClass": "SelectStyle",
+      "disabled": false,
+	  "items" : [
+		{
+			"value" : "1",
+			"label" : "Значение 1",
+			"checked" : true
+		},
+		
+		{
+			"value" : "2",
+			"label" : "Значение 2",
+			"checked" : false
+		},
+		
+		{
+			"value" : "3",
+			"label" : "Значение 3",
+			"checked" : false
+		}
+	  
+	  ]
+    }
+	
+	
+	
+	
+	],
+  
+
+
+  "postmessage": "Успешно"
+
+
+}
